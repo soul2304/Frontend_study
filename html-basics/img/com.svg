@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 788 273" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Artboard1" transform="matrix(1,0,0,1,-12.408751,-208.06376)">
+        <rect x="12.409" y="208.064" width="787.591" height="272.119" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <rect x="12.409" y="208.064" width="787.591" height="272.119"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(1.69271,0,0,1.69271,0.408751,0.06376)">
+                <g transform="matrix(-0.355753,-0.000208,-0.000199,0.339988,175.54524,123.01585)">
+                    <path d="M472.615,403.692L472.615,354.428L0,354.428L0,403.692L147.692,403.692L147.692,452.923L108.308,452.923L108.308,472.615L364.308,472.615L364.308,452.923L324.923,452.923L324.923,403.692L472.615,403.692Z" style="fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(0.917287,0,0,0.917287,-257.670217,-126.016253)">
+                    <g>
+                        <g transform="matrix(1,0,0,1,479.8,327.211)">
+                            <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:72px;stroke:black;stroke-width:0.9px;">W</text>
+                        </g>
+                        <g transform="matrix(1,0,0,1,546.456,327.211)">
+                            <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:72px;stroke:black;stroke-width:0.9px;">ebinar</text>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,0,0,1,479.8,422.004)">
+                        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:72px;stroke:black;stroke-width:0.9px;">Pros LLC</text>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(-0.602187,-0.000352,-0.000337,0.575501,297.555933,208.293919)">
+                <path d="M0,0L0,334.736L472.615,334.736L472.615,0L0,0ZM236.308,39.351C261.279,39.351 281.596,59.669 281.596,84.639C281.596,109.62 261.278,129.937 236.308,129.937C211.337,129.937 191.019,109.619 191.019,84.639C191.019,59.669 211.337,39.351 236.308,39.351ZM137.846,196.082C137.846,168.043 155.894,143.783 182.759,135.716L194.058,132.379L236.308,165.244L278.558,132.379L289.818,135.706C316.722,143.783 334.77,168.043 334.77,196.082L334.77,236.274L137.846,236.274L137.846,196.082ZM324.923,315.043L147.692,315.043L147.692,295.351L324.923,295.351L324.923,315.043ZM374.154,275.659L98.462,275.659L98.462,255.967L374.154,255.967L374.154,275.659Z" style="fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>
