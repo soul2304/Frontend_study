@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <style>
+        body{
+            align-items: center;
+            align-content: center;
+            padding: 20%;
+            
+        }
+        fieldset{
+            padding: 2%;
+        }
+        hr{
+            color: rgb(141, 169, 94);
+        }
+        input{
+            border-radius: 4px;
+            border-color: aliceblue;
+            padding: 5px;
+        }
+        .div1{
+            background-color: rgb(141, 169, 94);
+            margin-left: -20px;
+        }
+        .submitbtn{
+            margin-left: 135px;
+            padding: 5px;
+            width: 100px;
+            border-radius: 20px;
+            background-color: black;
+            color: aliceblue;
+        }
+        #name-box{
+            margin-left: 70px;
+            width: 200px;
+        }
+        #email-box{
+            margin-left: 70px;
+            width: 200px;
+        }
+        #tel{
+            margin-left: 69px;
+            width: 200px;
+        }
+        #address{
+            margin-left: 60px;
+            width: 218px;
+        }
+        #post{
+            margin-left: 51px;
+            width: 208px;
+        }
+        .country-box{
+            margin-left: 63px;
+            width: 220px;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        #card-number{
+            margin-left: 35px;
+            width: 200px;
+        }
+        #card-name{
+            margin-left: 33px;
+            width: 200px;
+        }
+        #security-code{
+            margin-left: 32px;
+            width: 200px;
+        }
+        .addresstxt{
+            text-align: start;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <hr>
+    <h3>Step 1 : Your details</h3>
+    <fieldset>
+        <label >Name</label>
+        <input type="text" name="name" id="name-box" placeholder="First and last name"> <br><br>
+        <label >Email</label>
+        <input type="email" name="email" id="email-box" placeholder="example@domain.com"><br><br>
+        <label >Phone</label>
+        <input type="tel" name="phone" id="tel" placeholder="Eg. +447500000000">
+    </fieldset>
+
+    <h3>Step 2 : Delivery address</h3>
+    <fieldset>
+        <label class="addresstxt">Address</label>
+        <textarea name="address" id="address" rows="5"></textarea><br><br>
+        <label for="">Post code</label>
+        <input type="text" name="post-code" pattern="[0-9]+" id="post"><br><br>
+        <label for="">Country</label>
+        <select name="country" class="country-box">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="China">China</option>
+            <option value="Israel">Israel</option>
+        </select>
+    </fieldset>
+
+    <h3>Step 3 : Card details</h3>
+
+    <fieldset>
+        <label for="">Card Type</label> <br><br>
+        <input type="radio">
+        <img src="img/visa-svgrepo-com.svg" width="20">
+        VISA
+        <input type="radio">
+        <img src="img/amex-svgrepo-com.svg" width="20">
+        AmEx
+        <input type="radio">
+        <img src="img/mastercard-svgrepo-com.svg" width="20">
+        Mastercard 
+        <br><br>
+        <label for="">Card Number</label>
+        <input type="text" name="card-number" pattern="[0-9]+" id="card-number"><br><br>
+        <label for="">Security Code</label>
+        <input type="text" name="security-code" pattern="[0-9]+" minlength="3" id="security-code"><br><br>
+        <label for="">Name on card</label>
+        <input type="text" name="card-name" pattern="[A-Z]+" placeholder="Exact name as on the card" id="card-name">
+    </fieldset>
+    <br>
+    <button class="submitbtn">BUY IT!</button>
+    <br><br>
+    </div>
+</body>
+</html>
