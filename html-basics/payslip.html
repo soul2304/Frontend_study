@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Salary Slip</title>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+        background: #f2f2f2;
+        padding: 20px;
+    }
+
+    .payslip {
+        width: 900px;
+        margin: auto;
+        background: #ffffff;
+        border: 1px solid #ddd;
+    }
+
+    /* HEADER */
+    .header {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        background: #8fa3a1;
+        color: #fff;
+    }
+
+    .header-left {
+        padding: 30px;
+    }
+
+    .header-left h1 {
+        margin: 0 0 10px;
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+
+    .header-left p {
+        margin: 5px 0;
+        font-size: 15px;
+    }
+
+    .header-right {
+        background: #2f5960;
+        padding: 30px;
+        text-align: left;
+    }
+
+    .company {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .contact p {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    /* EMPLOYEE INFO */
+    .info {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        font-size: 15px;
+    }
+
+    .info p {
+        margin: 6px 0;
+    }
+
+    .label {
+        font-weight: bold;
+        color: #2f5960;
+        width: 140px;
+        display: inline-block;
+    }
+
+    /* TABLE SECTIONS */
+    h2 {
+        margin: 30px 30px 10px;
+        color: #2f5960;
+        font-size: 18px;
+    }
+
+    table {
+        width: calc(100% - 60px);
+        margin: 0 30px 20px;
+        border-collapse: collapse;
+        font-size: 15px;
+    }
+
+    thead {
+        background: #8fa3a1;
+        color: #fff;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: center;
+    }
+
+    tbody tr:nth-child(even) {
+        background: #efefef;
+    }
+
+    .total-row {
+        background: #8fa3a1;
+        color: #0a0a0a;
+        font-weight: bold;
+    }
+
+    /* NET SALARY */
+    .net {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        margin: 30px;
+        color: #fff;
+    }
+
+    .net div {
+        padding: 18px;
+        font-size: 18px;
+        font-weight: bold;
+        background: #2f5960;
+    }
+
+    .net div:last-child {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    /* FOOTER */
+    .footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 30px;
+        font-size: 14px;
+    }
+
+    .footer p {
+        margin: 6px 0;
+        
+    }
+
+    .sign {
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 149px;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .line {
+        border-top: 1px dashed #000;
+        width: 100px;
+        margin: 0 auto 10px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="payslip">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-left">
+            <h1>SALARY SLIP</h1>
+            <p><strong>Pay Period</strong> : January 2026</p>
+            <p><strong>Payment date</strong> : February 5, 2026</p>
+        </div>
+
+        <div class="header-right">
+            <div class="company">NEXA OFFICE INFOSYSTEMS</div>
+            <div class="contact">
+                <p>************</p>
+                <p>lorem ipsum dolor sit amet</p>
+                <p>lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- EMPLOYEE INFO -->
+    <div class="info">
+        <div>
+            <p><span class="label">Employee Name</span>: John Doe</p>
+            <p><span class="label">Employee ID</span>: 01234</p>
+            <p><span class="label">Department</span>: Administrative staff</p>
+            <p><span class="label">Department</span>: Finance</p>
+            <p><span class="label">UAN Number</span>: 1234567890</p>
+            
+        </div>
+    </div>
+
+    <!-- INCOME -->
+    <h2>INCOME DETAILS</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>INFORMATION</th>
+                <th>AMOUNT </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Basic Salary</td>
+                <td>4.500.000 /.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Transportation Money</td>
+                <td>500.000 /.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Meal allowance</td>
+                <td>400.000 /.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bonus / Incentive</td>
+                <td>600.000 /.</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="2">TOTAL REVENUE</td>
+                <td>6,000,000 /.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- DEDUCTION -->
+    <h2>DEDUCTION DETAILS</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Income tax</td>
+                <td>150.000 /.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>BPJS Employment</td>
+                <td>100.000 /.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Other Cuts</td>
+                <td>50.000 /.</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="2">TOTAL DEDUCTIONS</td>
+                <td>300.000 /.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- NET SALARY -->
+    <div class="net">
+        <div>NET SALARY RECEIVED</div>
+        <div>RP. 5,700,000 /.</div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div>
+            <p><strong>Payment Method :</strong></p>
+            <p>Federal Bank</p>
+            <p>0123 4567 8901 2345</p>
+            <p>John Doe</p>
+        </div>
+
+        <div class="sign">
+            <div class="line"></div>
+            <p>(Manager HRD)</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
