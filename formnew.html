@@ -57,6 +57,9 @@
         <input type="tel" id="phone" name="phone" placeholder="Phone">
         <div id="phoneerror" class="error"></div>
 
+        Password:
+        <input type="password" id="password" name="password" placeholder="Password">
+
         <button type="submit">Submit</button>
         <div id="submiterror" class="error"></div>
 
@@ -70,17 +73,20 @@
             var age = document.getElementById("age").value.trim();
             var email = document.getElementById("email").value.trim();
             var phone = document.getElementById("phone").value.trim();
+            var password = document.getElementById("password").value.trim();
 
             var nameError = document.getElementById("nameerror");
             var ageError = document.getElementById("ageerror");
             var emailError = document.getElementById("emailerror");
             var phoneError = document.getElementById("phoneerror");
+            var passwordError = document.getElementById("passworderror");
             var submitError = document.getElementById("submiterror");
 
             nameError.textContent = "";
             ageError.textContent = "";  
             emailError.textContent = "";
             phoneError.textContent = "";
+            passwordError.textContent = "";
             submitError.textContent = "";
 
             //flag variable
@@ -108,6 +114,15 @@
             }else if(!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)){
                 emailError.textContent = "Please enter a valid email address.";
                 isValid = false;
+            }else if(email.length > 100){
+                emailError.textContent = "Email must be less than 100 characters.";
+                isValid = false;
+            }else if(email.indexOf("@") === -1 || email.indexOf(".") === -1){
+                emailError.textContent = "Email must contain '@' and '.'.";
+                isValid = false;
+            }else if(email.startsWith("@") || email.startsWith(".") || email.endsWith("@") || email.endsWith(".")){
+                emailError.textContent = "Email cannot start or end with '@' or '.'.";
+                isValid = false;
             }
 
             if(phone === ""){
@@ -116,10 +131,33 @@
             }else if(!/^[6-9]\d{9}$/.test(phone)){
                 phoneError.textContent = "Please enter a valid 10-digit phone number.";
                 isValid = false;
+            }else if(phone.length !== 10){
+                phoneError.textContent = "Phone number must be exactly 10 digits.";
+                isValid = false;
             }
 
             if(isValid){
                 submitError.textContent = "Form submitted successfully!";
+            }
+
+            if(password === ""){
+                passwordError.textContent = "Password is required.";
+                isValid = false;
+            }else if(password.length < 8 || password.length > 100){
+                passwordError.textContent = "Password must be between 8 and 100 characters.";
+                isValid = false;
+            }else if(!/[A-Z]/.test(password)){
+                passwordError.textContent = "Password must contain at least one uppercase letter.";
+                isValid = false;
+            }else if(!/[a-z]/.test(password)){
+                passwordError.textContent = "Password must contain at least one lowercase letter.";
+                isValid = false;
+            }else if(!/[0-9]/.test(password)){
+                passwordError.textContent = "Password must contain at least one digit.";
+                isValid = false;
+            }else if(!/[!@#$%^&*(),.?":{}|<>]/.test(password)){
+                passwordError.textContent = "Password must contain at least one special character.";
+                isValid = false;
             }
 
             document.getElementById("my_form").reset();
