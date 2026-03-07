@@ -23,25 +23,38 @@
 
         }
 
+        .error{
+            color: red;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        form input{
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
     </style>
 </head>
 <body>
     <!-- //name age email phone -->
     <form action="" id="my_form">
         Name:
-        <input type="text" name="name" placeholder="Name">
+        <input type="text" id="name" name="name" placeholder="Name">
         <div id="nameerror" class="error"></div>
 
         Age:
-        <input type="number" name="age" placeholder="Age">
+        <input type="number" id="age" name="age" placeholder="Age">
         <div id="ageerror" class="error"></div>
 
         Email:
-        <input type="email" name="email" placeholder="Email">
+        <input type="email" id="email" name="email" placeholder="Email">
         <div id="emailerror" class="error"></div>
 
         Phone:
-        <input type="tel" name="phone" placeholder="Phone">
+        <input type="tel" id="phone" name="phone" placeholder="Phone">
         <div id="phoneerror" class="error"></div>
 
         <button type="submit">Submit</button>
@@ -73,8 +86,44 @@
             //flag variable
             var isValid = true;
 
+            if(name === ""){
+                nameError.textContent = "Name is required.";
+                isValid = false;
+            }else if(!/^[a-zA-Z\s]+$/.test(name)){
+                nameError.textContent = "Name can only contain letters and spaces.";
+                isValid = false;
+            }else if(name.length < 2 || name.length > 50){
+                nameError.textContent = "Name must be between 2 and 50 characters.";
+                isValid = false;
+            }
 
-            console.log("Form submitted");
+            if(age === "" || isNaN(age) || age < 0 || age > 120){
+                ageError.textContent = "Please enter a valid age between 0 and 120.";
+                isValid = false;
+            }
+
+            if(email === ""){
+                emailError.textContent = "Email is required.";
+                isValid = false;
+            }else if(!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)){
+                emailError.textContent = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            if(phone === ""){
+                phoneError.textContent = "Phone is required.";
+                isValid = false;
+            }else if(!/^[6-9]\d{9}$/.test(phone)){
+                phoneError.textContent = "Please enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+
+            if(isValid){
+                submitError.textContent = "Form submitted successfully!";
+            }
+
+            document.getElementById("my_form").reset();
+
         });
         
     </script>
