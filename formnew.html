@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            border: black solid 1px;
+            padding: 15px;
+            border-radius: 5px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- //name age email phone -->
+    <form action="" id="my_form">
+        Name:
+        <input type="text" name="name" placeholder="Name">
+        <div id="nameerror" class="error"></div>
+
+        Age:
+        <input type="number" name="age" placeholder="Age">
+        <div id="ageerror" class="error"></div>
+
+        Email:
+        <input type="email" name="email" placeholder="Email">
+        <div id="emailerror" class="error"></div>
+
+        Phone:
+        <input type="tel" name="phone" placeholder="Phone">
+        <div id="phoneerror" class="error"></div>
+
+        <button type="submit">Submit</button>
+        <div id="submiterror" class="error"></div>
+
+    </form>
+
+    <script>
+        document.getElementById("my_form").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            var name = document.getElementById("name").value.trim();
+            var age = document.getElementById("age").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var phone = document.getElementById("phone").value.trim();
+
+            var nameError = document.getElementById("nameerror");
+            var ageError = document.getElementById("ageerror");
+            var emailError = document.getElementById("emailerror");
+            var phoneError = document.getElementById("phoneerror");
+            var submitError = document.getElementById("submiterror");
+
+            nameError.textContent = "";
+            ageError.textContent = "";  
+            emailError.textContent = "";
+            phoneError.textContent = "";
+            submitError.textContent = "";
+
+            //flag variable
+            var isValid = true;
+
+
+            console.log("Form submitted");
+        });
+        
+    </script>
+</body>
+</html>

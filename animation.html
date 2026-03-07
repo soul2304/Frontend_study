@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Circle Movement</title>
+
+<style>
+#circle1{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:red;
+    position:absolute;
+}
+
+button{
+    position:absolute;
+    top:200px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="circle1"></div>
+<button onclick="moveIt()">Move Circle</button>
+
+<script>
+
+    var interval = null;
+
+    function moveIt(){
+
+    let circle = document.getElementById("circle1");
+
+    let x = 0;
+    let y = 0;
+
+    clearInterval(interval);
+
+    interval = setInterval(frame,0.5);
+
+    function frame(){
+
+        if(x < 1200 && y == 0){
+            x++;
+            circle.style.left = x + "px";
+        }
+        else if(x == 1200 && y < 650){
+            y++;
+            circle.style.top = y + "px";
+        }
+        else if(x > 0 && y == 650){
+            x--;
+            circle.style.left = x + "px";
+        }
+        else if(x == 0 && y > 0){
+            y--;
+            circle.style.top = y + "px";
+        }
+
+    }
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+        var str = "1230 ";
+        var pattern = /\b1/g;
+        var result = (pattern).test(str);
+        document.write(result + "<br>");
+        alert(result);
+
+        //do a global search for is followed by all
+        var str2 = "This is all";
+        var pattern2 = /is(?= all)/g;
+        var result2 = (pattern2).test(str2);
+        document.write(result2);
+    </script>
+</body>
+</html>

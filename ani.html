@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Move Circle</title>
+
+<style>
+body{
+    height:100vh;
+}
+
+#circle{
+    width:50px;
+    height:50px;
+    background:red;
+    border-radius:50%;
+    position:absolute;
+    left:50px;   
+    top:50px;    
+}
+</style>
+</head>
+
+<body>
+
+<div id="circle"></div>
+
+<script>
+
+let circle = document.getElementById("circle");
+
+let x = null;
+let y = null;
+
+let targetX = 1200;   
+let targetY = 0;
+function moveCircle(){
+
+if(x < targetX){
+    x += 2;
+}
+
+if(y < targetY){
+    y += 2;
+}
+
+circle.style.left = x + "px";
+circle.style.top = y + "px";
+
+if(x < targetX || y < targetY){
+    requestAnimationFrame(moveCircle);
+}
+
+}
+
+moveCircle();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      width: 260px;
+      height: 540px;
+      background: #fefcfc;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        animation: forwards 3s ease-in-out;
+        animation: backwards 0.3s ease-in-out;
+    }
+
+    @keyframes forwards {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }   
+    @keyframes backwards {
+      0% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 8px 12px;
+      border: none;
+      background: #007bff;
+      color: rgb(249, 247, 247);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" id="card">
+  <img id="cardImg">
+  <h3 id="cardTitle"></h3>
+  <p id="cardDesc"></p>
+  <button  id="btn">Next</button>
+</div>
+
+<script>
+
+  const cardText = [
+    {
+      title: "Solo Leveling",
+      description: "Main character of Solo Leveling.",
+      image: "img/sololeveling.jpg"
+    },
+    {
+      title: "Naruto",
+      description: "Anime character of Naruto.",
+      image: "img/naruto.jpg"
+    },
+    {
+      title: "One Piece",
+      description: "Anime character of One Piece.",
+      image: "img/onepiece.jpg"
+      
+    }
+  ];
+
+  let currentIndex = 0;
+
+  const cardImg = document.getElementById("cardImg");
+  const cardTitle = document.getElementById("cardTitle");
+  const cardDesc = document.getElementById("cardDesc");
+
+  function showCard(index) {
+    cardImg.src = cardText[index].image;
+    cardTitle.textContent = cardText[index].title;
+    cardDesc.textContent = cardText[index].description;
+  }
+
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click", function showCardNext() {
+        currentIndex++;
+        if (currentIndex >= cardText.length) {
+        currentIndex = 0;
+        }
+        showCard(currentIndex);
+    });
+    showCard(currentIndex);
+ 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="parent" style="width: 60%;margin: 20px;">Parent Element
+        <div class="child" style="width: 50%;margin: 20px;">Child Element</div>
+    </div>
+
+    <script>
+        let theChild = document.getElementById("child");
+        let theParent = document.getElementById("parent");
+
+        alert(theClosestParent.nodeName);
+        if(theClosestParent){
+            theClosestParent.style.backgroundColor = "red";
+            theClosestParent.innerHTML+="Found the parent element!";
+
+        }
+    </script>
+         -->
+
+
+         <div id="parent" class="parent" style="width: 60%; margin: 20px; padding: 20px; border: 2px solid black;">
+    Parent Element
+    <div id="child" class="child" style="width: 50%; margin: 20px; padding: 20px; border: 2px solid blue;">
+        Child Element
+    </div>
+</div>
+
+<script>
+    let theChild = document.getElementById("child");
+
+    // find closest parent with class "parent"
+    let theClosestParent = theChild.closest(".parent");
+
+    alert(theClosestParent.nodeName);
+
+    if (theClosestParent) {
+        theClosestParent.style.backgroundColor = "red";
+        theClosestParent.innerHTML += "<p>Found the parent element!</p>";
+    }
+</script>
+
+</body>
+</html>
